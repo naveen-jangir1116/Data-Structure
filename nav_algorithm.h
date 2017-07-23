@@ -1,0 +1,42 @@
+#pragma once
+
+// #include<iostream>
+
+
+void print_array(int arr[], int arr_size) {
+    for (size_t i = 0; i < arr_size; i++) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
+void bubble_sort(int arr[], int arr_size) {
+    int loop_count = arr_size-2;
+
+    while (loop_count >= 0) {
+        for (size_t i = 0; i <= loop_count; i++) {
+            if (arr[i] > arr[i+1]) {
+                swap(arr[i], arr[i+1]);
+                // continue;
+            }
+        }
+        loop_count--;
+    }
+}
+
+void selection_sort(int arr[], int arr_size) {
+    if (arr_size == 1)
+        return;
+
+    int start_index = 0, min_index;
+    while (start_index <= arr_size-2) {
+        min_index = start_index;
+        for (size_t i = start_index+1; i <= arr_size-1; i++) {
+            if (arr[i] < arr[min_index]) {
+                min_index = i;
+            }
+        }
+        swap(arr[start_index], arr[min_index]);
+        start_index++;
+    }
+}
