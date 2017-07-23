@@ -1,13 +1,12 @@
-#pragma once
-
-// #include<iostream>
+#ifndef NAV_ALGORITHM_H
+#define NAV_ALGORITHM_H
 
 
 void print_array(int arr[], int arr_size) {
     for (size_t i = 0; i < arr_size; i++) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 void bubble_sort(int arr[], int arr_size) {
@@ -17,7 +16,6 @@ void bubble_sort(int arr[], int arr_size) {
         for (size_t i = 0; i <= loop_count; i++) {
             if (arr[i] > arr[i+1]) {
                 swap(arr[i], arr[i+1]);
-                // continue;
             }
         }
         loop_count--;
@@ -40,3 +38,5 @@ void selection_sort(int arr[], int arr_size) {
         start_index++;
     }
 }
+
+#endif
