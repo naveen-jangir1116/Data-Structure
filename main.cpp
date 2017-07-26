@@ -3,7 +3,7 @@
 using namespace std;
 
 #include "nav_algorithm.h"
-
+#include "nav_helper.h"
 
 int main(int argc, char const *argv[]) {
     int arr[] = {10, 2, 3, 1, 5, 7};
